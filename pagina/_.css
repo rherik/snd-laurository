@@ -1,0 +1,53 @@
+body{
+    background-color: rgb(151, 4, 41);
+    display: flex;
+}
+
+.container{
+    margin: auto;
+    border-radius: 4%;
+    width: 500px;   
+    height: 500px;
+    padding: 10px;
+
+    background-image: url("./laura.jpg");
+    background-size: 520px 520px;
+    background-repeat: no-repeat;
+}
+.texto {
+    padding-left: 28%;
+    color: antiquewhite;
+    background-color: rgba(12, 19, 22, 0.849);
+    border-radius: 4px;
+}
+.conteudo{
+    flex-direction: column;
+    justify-content: center;
+}
+.botoes{
+    flex-direction: row;
+}
+img {
+    width: 180px;
+    border-radius: 2%;
+}
+#sim{
+    height: 40px;
+    width: 60px;
+    border: 2px solid white;
+    border-radius: 4px;
+    box-shadow: 10rem;
+}
+button:hover{
+    background-color: rgba(224, 34, 34, 0.822);
+    cursor: pointer;
+}
+#nao{
+    position: absolute;
+    height: 40px;
+    width: 60px;
+    border: 2px solid white;
+    border-radius: 4px;
+    box-shadow: 10rem;
+    margin-left: 70px;
+}
