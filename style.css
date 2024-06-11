@@ -1,16 +1,15 @@
-:root{
-    --bkg: linear-gradient(-45deg, #4c4c4c, #aaa9a9, #8a55b6, #23d5ab);
-}
-
 body{
-    background-color: rgb(151, 4, 41);
     display: flex;
+    justify-content: center;
+
+    background: linear-gradient(106deg,#ee1414,#e923ac,#811113, #b129e7);
+    animation: gradient-animation 12s ease infinite;
+    background-size: 180% 180%;
 }
 
 .container{
-    margin: auto;
-    border-radius: 4%;
-    width: 500px;   
+    border-radius: 2%;
+    width: 480px;   
     height: 500px;
     padding: 10px;
 
@@ -20,24 +19,26 @@ body{
     opacity: 90%;
 }
 
-.conteudo{
-    justify-content: end;
+.botoes {
+    margin: 20px;
 }
 
 .texto {
-    padding-left: 28%;
-    color: antiquewhite;
-    background-color: rgba(12, 19, 22, 0.849);
-    border-radius: 4px;
-}
-.botoes{
+    display: flex;
     flex-direction: row;
+    justify-content: center;
+
+    text-decoration-color: antiquewhite;
+    border-radius: 4px;
+
+    background-image: url("imgs/pixel_heart.gif");
+    background-size: 165px 120px;
 }
-img {
-    width: 180px;
-    border-radius: 2%;
-    opacity: 88%;
+
+a{
+    text-decoration: none;
 }
+
 #sim{
     height: 40px;
     width: 60px;
@@ -45,10 +46,7 @@ img {
     border-radius: 4px;
     box-shadow: 10rem;
 }
-button:hover{
-    background-color: rgba(224, 34, 34, 0.822);
-    cursor: pointer;
-}
+
 #nao{
     position: absolute;
     height: 40px;
@@ -59,17 +57,45 @@ button:hover{
     margin-left: 70px;
 }
 
-@keyframes gradient{
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+.texto:hover{
+    cursor: pointer;
+
+    animation: pulse 0.3s infinite;
+    display: flex;
+    animation-direction: alternate;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
 }
-@media screen and (max-width: 768px) {
-    
+@-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(1);
+      -webkit-filter: brightness(100%);
+    }
+    100% {
+      -webkit-transform: scale(1.1);
+      -webkit-filter: brightness(200%);
+    }
+  }
+  
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      filter: brightness(100%);
+    }
+    100% {
+      transform: scale(1.1);
+      filter: brightness(200%);
+    }
+}
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
 }

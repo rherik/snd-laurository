@@ -8,19 +8,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="container">
         <div class="texto">
-            <h1>Laurinha,</h1>
-            <h3>Aceitas namorar cmg?</h3>
-        </div>
-        <div class="conteudo">
             <a href="https://www.youtube.com/watch?v=v3vGgKefwfw" target="_blank">
-                <img src="imgs/pixel_heart.gif" alt="">
+                <h1>Laurinha,</h1>
+                <h3>Aceitas namorar cmg?</h3>
             </a>
-            <div class="botoes">
-                <button id="sim" onclick="aceita()">Sim</button>
-                <button id="nao" onmouseover="fuja()">Não</button>
-            </div>
+        </div>
+        <div class="botoes">
+            <button id="sim" onclick="aceita()">Sim</button>
+            <button id="nao" onmouseover="fuja()" onclick="fuja()">Não</button>
         </div>
     </div>
     <script src="index.js"></script>
